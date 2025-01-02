@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Strategy Recommender</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Study Strategy Recommender</h1>
+  <h2>What's your preferred study style?</h2>
+
+  <!-- Adding a label for accessibility -->
+  <label for="studyStyle">Choose your study style:</label>
+  <select id="studyStyle" name="studyStyle">
+    <option value="">Select...</option>
+    <option value="visual">Visual</option>
+    <option value="auditory">Auditory</option>
+    <option value="kinesthetic">Kinesthetic</option>
+    <option value="reading">Reading/Writing</option>
+  </select>
+  <button onclick="recommendStrategy()">Get Strategy</button>
+
+  <h2>Not sure? Take this quick quiz:</h2>
+  <p>
+    Do you prefer learning through diagrams, listening, hands-on activities, or reading?
+  </p>
+  <button onclick="showQuiz()">Take Quiz</button>
+
+  <div id="quiz" style="display: none;">
+    <input type="radio" name="quizAnswer" value="visual" id="visual">
+    <label for="visual">Diagrams/Charts</label><br>
+    <input type="radio" name="quizAnswer" value="auditory" id="auditory">
+    <label for="auditory">Listening</label><br>
+    <input type="radio" name="quizAnswer" value="kinesthetic" id="kinesthetic">
+    <label for="kinesthetic">Hands-on</label><br>
+    <input type="radio" name="quizAnswer" value="reading" id="reading">
+    <label for="reading">Reading</label><br>
+    <button onclick="submitQuiz()">Submit Quiz</button>
+  </div>
+
+  <div id="output"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
