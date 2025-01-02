@@ -1,2 +1,2 @@
-# This is a study stragey recommender
+# This is a study strategy recommender
 ### This is prone to heavy changes
